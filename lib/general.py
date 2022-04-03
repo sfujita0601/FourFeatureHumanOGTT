@@ -10,13 +10,13 @@ def getToday():
     Today = '{0:%Y%m%d}'.format(now)
     return Today
 
-def ConvertParamLabelRtoPython(Label):#Rで文字化けしたものを統一的な表記に直して打ち込む    
+def ConvertParamLabelRtoPython(Label):    
     Labela = [Label[i] + '__a' for i in range(len(Label))]; Labelc = [Label[i] + '__c' for i in range(len(Label))]; Labeld = [Label[i] + '__d' for i in range(len(Label))]; Labele = [Label[i] + '__e' for i in range(len(Label))]
     Labelacde = Labela + Labelc + Labeld + Labele
     #DF.columns = Labelacde; DF.index = Labelacde
     return(Labelacde)
     
-def delstrinlist(list1):#リスト内にある文字列str要素を削除する、
+def delstrinlist(list1):
 
      dellist=[ i for i in range(len(list1)) if isinstance(list1[i],type('str'))]
      dellist.reverse()
